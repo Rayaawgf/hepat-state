@@ -1,0 +1,55 @@
+.banner {
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+}
+
+.custom-panel {
+  width: 50%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  font-size: 24px;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-buttons li {
+  margin-left: 20px;
+}

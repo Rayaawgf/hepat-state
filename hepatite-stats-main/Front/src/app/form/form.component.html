@@ -1,0 +1,297 @@
+<p-panel styleClass="mt-4 mt-6" header="{{ questionsList[0].text }}">
+  <p-inputNumber [(ngModel)]="age" inputId="age"></p-inputNumber>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[1].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[1].label }}"
+        value="Homme"
+        [(ngModel)]="sexe"
+        inputId="homme"
+      ></p-radioButton>
+      <label for="homme" class="ml-2">Homme</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[1].label }}"
+        value="Femme"
+        [(ngModel)]="sexe"
+        inputId="femme"
+      ></p-radioButton>
+      <label for="femme" class="ml-2">Femme</label>
+    </div>
+  </div>
+</p-panel>
+
+
+<p-panel styleClass="mt-4 my-panel" header="{{ questionsList[2].text }}">
+  <p-dropdown
+    [options]="wilayas"
+    [(ngModel)]="wilaya"
+    optionLabel="nom"
+    placeholder="Sélectionnez un wilaya"
+    [filter]="true"
+    filterBy="nom"
+  ></p-dropdown>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[3].text }}">
+  <p-dropdown
+    [options]="wilaya.communes"
+    [(ngModel)]="commune"
+    optionLabel="nom"
+    placeholder="Sélectionnez une commune"
+    [showClear]="true"
+    [filter]="true"
+    filterBy="nom"
+  ></p-dropdown>
+</p-panel>
+<p-panel styleClass="mt-4" header="{{ questionsList[4].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[4].label }}"
+        value="Oui"
+        [(ngModel)]="a_fait_un_test"
+        inputId="oui"
+      ></p-radioButton>
+      <label for="oui" class="ml-2">Oui</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[4].label }}"
+        value="Non"
+        [(ngModel)]="a_fait_un_test"
+        inputId="non"
+      ></p-radioButton>
+      <label for="non" class="ml-2">Non</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[5].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[5].label }}"
+        value="Jamais"
+        [(ngModel)]="frequence_a_boire_alcool"
+        inputId="Jamais"
+      ></p-radioButton>
+      <label for="Jamais" class="ml-2">Jamais</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[5].label }}"
+        value="Occasionnellement"
+        [(ngModel)]="frequence_a_boire_alcool"
+        inputId="occasionnellement"
+      ></p-radioButton>
+      <label for="occasionnellement" class="ml-2">Occasionnellement</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[5].label }}"
+        value="Quotidiennement"
+        [(ngModel)]="frequence_a_boire_alcool"
+        inputId="quotidiennement"
+      ></p-radioButton>
+      <label for="quotidiennement" class="ml-2">Quotidiennement</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[6].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[6].label }}"
+        value="Jamais"
+        [(ngModel)]="frequence_a_utiliser_drogue"
+        inputId="Jamais"
+      ></p-radioButton>
+      <label for="Jamais" class="ml-2">Jamais</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[6].label }}"
+        value="Occasionnellement"
+        [(ngModel)]="frequence_a_utiliser_drogue"
+        inputId="occasionnellement"
+      ></p-radioButton>
+      <label for="occasionnellement" class="ml-2">Occasionnellement</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[6].label }}"
+        value="Quotidiennement"
+        [(ngModel)]="frequence_a_utiliser_drogue"
+        inputId="quotidiennement"
+      ></p-radioButton>
+      <label for="quotidiennement" class="ml-2">Quotidiennement</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[7].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[7].label }}"
+        value="Oui"
+        [(ngModel)]="a_des_rapports_sexuels_non_proteges"
+        inputId="oui"
+      ></p-radioButton>
+      <label for="oui" class="ml-2">Oui</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[7].label }}"
+        value="Non"
+        [(ngModel)]="a_des_rapports_sexuels_non_proteges"
+        inputId="non"
+      ></p-radioButton>
+      <label for="non" class="ml-2">Non</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[8].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[8].label }}"
+        value="Oui"
+        [(ngModel)]="a_ete_vaccine"
+        inputId="oui"
+      ></p-radioButton>
+      <label for="oui" class="ml-2">Oui</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[8].label }}"
+        value="Non"
+        [(ngModel)]="a_ete_vaccine"
+        inputId="non"
+      ></p-radioButton>
+      <label for="non" class="ml-2">Non</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[9].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[9].label }}"
+        value="Oui"
+        [(ngModel)]="a_remarquer_jaunisse"
+        inputId="oui"
+      ></p-radioButton>
+      <label for="oui" class="ml-2">Oui</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[9].label }}"
+        value="Non"
+        [(ngModel)]="a_remarquer_jaunisse"
+        inputId="non"
+      ></p-radioButton>
+      <label for="non" class="ml-2">Non</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[10].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[10].label }}"
+        value="Oui"
+        [(ngModel)]="avez_vous_etes_diagnostiquer"
+        inputId="oui"
+      ></p-radioButton>
+      <label for="oui" class="ml-2">Oui</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[10].label }}"
+        value="Non"
+        [(ngModel)]="avez_vous_etes_diagnostiquer"
+        inputId="non"
+      ></p-radioButton>
+      <label for="non" class="ml-2">Non</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[11].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[11].label }}"
+        value="Oui"
+        [(ngModel)]="avez_vous_voyager"
+        inputId="oui"
+      ></p-radioButton>
+      <label for="oui" class="ml-2">Oui</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[11].label }}"
+        value="Non"
+        [(ngModel)]="avez_vous_voyager"
+        inputId="non"
+      ></p-radioButton>
+      <label for="non" class="ml-2">Non</label>
+    </div>
+  </div>
+</p-panel>
+
+<p-panel styleClass="mt-4" header="{{ questionsList[12].text }}">
+  <div class="flex flex-column gap-3">
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[12].label }}"
+        value="Oui"
+        [(ngModel)]="avez_vous_ressenti_fatigue"
+        inputId="oui"
+      ></p-radioButton>
+      <label for="oui" class="ml-2">Oui</label>
+    </div>
+
+    <div class="flex align-items-center">
+      <p-radioButton
+        name="{{ questionsList[12].label }}"
+        value="Non"
+        [(ngModel)]="avez_vous_ressenti_fatigue"
+        inputId="non"
+      ></p-radioButton>
+      <label for="non" class="ml-2">Non</label>
+    </div>
+  </div>
+</p-panel>
+
+<br />
+<div class="centerButton">
+  <p-button class="mt-2" (click)="saveResponse()" label="Enregistrer"></p-button>
+</div>
+
+<p-dialog header="Confirmation" [(visible)]="showDialog" [style]="{width: '50vw'}">
+    <p>
+      Votre réponse a été enregistrée avec succès. Nous vous remercions de votre participation !
+    </p>
+</p-dialog>

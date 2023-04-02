@@ -1,0 +1,22 @@
+.centerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.centerQuestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.styleSelection {
+  display: flex;
+  width: 100%;
+}
+
+.my-panel .ui-panel-titlebar {
+  background-color: rgb(123, 123, 220);
+  color: white; /* Optional: change the text color */
+}

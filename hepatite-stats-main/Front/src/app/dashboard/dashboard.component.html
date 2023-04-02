@@ -1,0 +1,31 @@
+<div class="card-container mt-6">
+  <div class="card">
+    <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+  </div>
+
+  <div class="card">
+    <p-chart
+      type="bar"
+      [data]="dataHomeFemmeGraph"
+      [options]="basicOptions"
+    ></p-chart>
+  </div>
+</div>
+<br><br><br>
+<div class="card flex justify-content-center mt-2 mr-4" [style]="{width: '50%'}">
+  <p-dropdown
+    [options]="wilayas"
+    [(ngModel)]="selectedWilaya"
+    optionLabel="nom"
+    placeholder="Sélectionnez un wilaya"
+    [filter]="true"
+    filterBy="nom"
+    (onChange)="onChangeWilaya($event)"
+  ></p-dropdown>
+
+  <ng-container *ngIf="selectedWilaya.nom!== ''">
+    <div class="card">
+      <p-chart type="bar" [data]="basicDataCommunes" [options]="basicOptions"></p-chart>
+    </div>
+  </ng-container>
+</div>
